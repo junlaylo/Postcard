@@ -2,8 +2,6 @@
 //  PostcardTests.swift
 //  PostcardTests
 //
-//  Created by Jacky Poon on 2014-09-16.
-//  Copyright (c) 2014 jacsdev. All rights reserved.
 //
 
 import UIKit

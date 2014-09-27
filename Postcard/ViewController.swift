@@ -2,8 +2,6 @@
 //  ViewController.swift
 //  Postcard
 //
-//  Created by Jacky Poon on 2014-09-16.
-//  Copyright (c) 2014 jacsdev. All rights reserved.
 //
 
 import UIKit
@@ -26,6 +24,7 @@ class ViewController: UIViewController {
         enterMessageTextField.text = ""
         enterMessageTextField.resignFirstResponder()
         
+        // set the title
         sendMessageButton.setTitle("Message Sent", forState: UIControlState.Normal)
         
     }
