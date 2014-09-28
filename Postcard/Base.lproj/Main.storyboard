@@ -52,17 +52,17 @@
                                 <rect key="frame" x="227" y="72" width="80" height="80"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1hy-Vr-HA7">
-                                <rect key="frame" x="16" y="191" width="288" height="30"/>
+                                <rect key="frame" x="16" y="266" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zD3-TP-YAe">
-                                <rect key="frame" x="16" y="238" width="288" height="30"/>
+                                <rect key="frame" x="16" y="313" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbM-br-wop">
-                                <rect key="frame" x="92" y="291" width="137" height="30"/>
+                                <rect key="frame" x="92" y="366" width="137" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.11183691549486796" blue="0.21868312121280631" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Send Mail">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,7 +72,13 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veD-BX-DC4">
-                                <rect key="frame" x="16" y="72" width="192" height="94"/>
+                                <rect key="frame" x="16" y="82" width="199" height="94"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYR-Lm-vSQ">
+                                <rect key="frame" x="16" y="204" width="203" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -86,6 +92,7 @@
                         <outlet property="enterMessageTextField" destination="zD3-TP-YAe" id="WI8-j8-HbD"/>
                         <outlet property="enterNameTextField" destination="1hy-Vr-HA7" id="b0r-lw-R1H"/>
                         <outlet property="messageLabel" destination="veD-BX-DC4" id="p21-Pp-box"/>
+                        <outlet property="nameLabel" destination="hYR-Lm-vSQ" id="54j-tL-9Pb"/>
                         <outlet property="sendMessageButton" destination="SbM-br-wop" id="CJm-PW-m6s"/>
                     </connections>
                 </viewController>

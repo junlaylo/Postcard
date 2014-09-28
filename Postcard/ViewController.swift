@@ -6,7 +6,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet weak var nameLabel: UILabel!
 
     @IBOutlet weak var messageLabel: UILabel!
     
@@ -17,12 +19,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var sendMessageButton: UIButton!
     
     @IBAction func sendMailButtonPressed(sender: UIButton) {
+        
+        nameLabel.textColor = UIColor.blueColor()
+        nameLabel.hidden = false;
+        nameLabel.text = enterNameTextField.text
+        
         messageLabel.textColor = UIColor.greenColor()
         messageLabel.hidden = false
         messageLabel.text = enterMessageTextField.text
         
         enterMessageTextField.text = ""
         enterMessageTextField.resignFirstResponder()
+        
+        enterNameTextField.text = ""
+        enterNameTextField.resignFirstResponder()
         
         // set the title
         sendMessageButton.setTitle("Message Sent", forState: UIControlState.Normal)
@@ -31,7 +41,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        enterMessageTextField.delegate = self
+        enterNameTextField.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        enterMessageTextField.resignFirstResponder()
+        enterNameTextField.resignFirstResponder()
+        return true
     }
 
     override func didReceiveMemoryWarning() {
